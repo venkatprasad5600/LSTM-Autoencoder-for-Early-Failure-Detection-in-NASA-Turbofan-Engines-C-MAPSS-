@@ -35,7 +35,7 @@ Sequence window size = 30 cycles
 
 Input shape: (30 timesteps × 21 sensors)
 
-🧠 Model Architecture
+# Model Architecture
 # Encoder:
 
 1) LSTM(64)
