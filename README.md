@@ -1,13 +1,13 @@
 # LSTM-Autoencoder-for-Early-Failure-Detection-in-NASA-Turbofan-Engines-C-MAPSS-
 
-📌 Problem Statement
+# Problem Statement
 
 Predictive maintenance is critical in aerospace systems.
 This project applies an LSTM Autoencoder to detect anomalous behavior in turbofan engines using the NASA C-MAPSS dataset.
 
 The goal is to identify early-stage engine degradation before failure occurs.
 
-## Dataset
+# Dataset
 
 Dataset: NASA C-MAPSS (FD001 subset)
 
@@ -25,7 +25,7 @@ We compute Remaining Useful Life (RUL):
 
 Engines with RUL ≤ 30 are treated as "near failure" (anomaly condition).
 
-## Data Preprocessing
+# Data Preprocessing
 
 Removed extra blank columns
 
@@ -57,7 +57,7 @@ Optimizer: Adam
 Epochs: 10
 Batch Size: 128
 
-📈 Anomaly Detection Strategy
+# Anomaly Detection Strategy
 
 Reconstruction Error:
 MSE=mean((X−X(reconstructed))**2)
@@ -67,7 +67,8 @@ Threshold:
 
 Sequences above threshold are classified as anomalies.
 
-📊 Results
+# Results
+
 Metric	Value
 Accuracy	83%
 ROC-AUC	0.41
@@ -75,7 +76,7 @@ F1 (Failure Class)	0.00
 
 Confusion Matrix shows strong bias toward normal class.
 
-🔍 Analysis
+# Analysis
 
 The autoencoder reconstructs both normal and degraded sequences similarly, leading to poor anomaly separation.
 
@@ -84,8 +85,8 @@ ROC-AUC < 0.5 indicates the reconstruction error is not a strong discriminator f
 This suggests:
 
 Reconstruction-based anomaly detection may not align with RUL thresholding.
-
 Failure progression may not be sharply separable via MSE alone.
-🏁 Conclusion
+
+# Conclusion
 
 This project demonstrates an end-to-end deep learning pipeline for predictive maintenance.
